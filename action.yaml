@@ -1,0 +1,28 @@
+name: 'Check Licenses'
+description: 'Check new and updated package licenses'
+
+inputs:
+  token:
+    description: 'Github token. Defaults to secrets.GITHUB_TOKEN'
+    required: false,
+    default: ${{ github.token }}
+
+  repo:
+    required: false
+    default: ${{ github.repository }}
+  
+  current_sha:
+    required: false, 
+    default: ${{ github.sha }}
+  
+  target_ref:
+    required: false
+    default: ${{ github.base_ref }}
+
+outputs:
+  message:
+    description: 'The changes to the package licenses'
+
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
