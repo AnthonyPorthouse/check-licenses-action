@@ -1,4 +1,4 @@
-import core from "@actions/core";
+import * as core from "@actions/core";
 import { components } from "@octokit/openapi-types";
 import { octokit } from "./utils";
 

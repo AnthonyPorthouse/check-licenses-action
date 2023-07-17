@@ -4,7 +4,7 @@ description: 'Check new and updated package licenses'
 inputs:
   token:
     description: 'Github token. Defaults to secrets.GITHUB_TOKEN'
-    required: false,
+    required: false
     default: ${{ github.token }}
 
   repo:
@@ -12,7 +12,7 @@ inputs:
     default: ${{ github.repository }}
   
   current_sha:
-    required: false, 
+    required: false
     default: ${{ github.sha }}
   
   target_ref:
