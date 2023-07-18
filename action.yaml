@@ -10,11 +10,11 @@ inputs:
   repo:
     required: false
     default: ${{ github.repository }}
-  
+
   current_sha:
     required: false
     default: ${{ github.sha }}
-  
+
   target_ref:
     required: false
     default: ${{ github.base_ref }}
@@ -26,3 +26,4 @@ outputs:
 runs:
   using: 'node16'
   main: 'dist/index.js'
+  pre: 'npm ci'
